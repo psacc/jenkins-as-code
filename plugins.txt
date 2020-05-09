@@ -1,0 +1,2 @@
+git:latest
+configuration-as-code:latest
