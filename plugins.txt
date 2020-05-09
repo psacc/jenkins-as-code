@@ -1,5 +1,5 @@
 git:latest
-github:latest
+github-branch-source:latest
 configuration-as-code:latest
 docker-plugin:latest
 job-dsl:latest
