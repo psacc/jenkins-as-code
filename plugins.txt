@@ -1,2 +1,6 @@
 git:latest
+github:latest
 configuration-as-code:latest
+docker-plugin:latest
+job-dsl:latest
+workflow-multibranch:latest

@@ -1,0 +1,42 @@
+jenkins:
+    systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code plugin\n\n"
+    numExecutors: 5
+    scmCheckoutRetryCount: 2
+    mode: NORMAL
+
+    securityRealm:
+      local:
+        allowsSignup: false
+        users:
+          - id: "admin"
+            password: "admin"
+
+    authorizationStrategy:
+      loggedInUsersCanDoAnything:
+        allowAnonymousRead: false
+  
+    clouds:
+      - docker:
+          name: "docker"
+          dockerApi:
+            dockerHost:
+              uri: "unix:///var/run/docker.sock"
+  
+    # globalLibraries:
+    #   libraries:
+    #     - name: "awesome-lib"
+    #       retriever:
+    #         modernSCM:
+    #           scm:
+    #             git:
+    #               remote: "https://github.com/jenkins-infra/pipeline-library.git"
+  
+    # location:
+    #   adminAddress: you@example.com
+    #   url: https://ci.example.com/
+  
+    # mailer:
+    #   replyToAddress: do-not-reply@acme.org
+    #   smtpHost: smtp.acme.org
+    #   smtpPort: 4441
+  
